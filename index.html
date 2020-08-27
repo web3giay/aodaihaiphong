@@ -11047,23 +11047,7 @@ span.dongcuaso {
         })();
     </script>
 <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted){}" style="display: none;"></iframe>
-<script type="text/javascript">
-    var submitted = false;
-    function emptycart() {
-        submitted = true;
-    }
-    $("iframe#hidden_iframe").on("load", function () {
-    	$('input,select').val('');
-       alert('Bạn đã gửi đơn hàng thành công. Chúng tôi sẽ liên hệ lại với ban!');
-    });
-	$('.anhmap').click(function(event) {
-  $('.diachicuahang').toggle();
-});
-$('.dongcuaso').click(function(event) {
- $('.diachicuahang').hide();
-});
-	
-</script>
+
 	<div class="mapicon">
 		
 		<div class="anhmap">
@@ -11083,6 +11067,23 @@ $('.dongcuaso').click(function(event) {
         </a>
     </div>
 </div>
+	<script type="text/javascript">
+    var submitted = false;
+    function emptycart() {
+        submitted = true;
+    }
+    $("iframe#hidden_iframe").on("load", function () {
+    	$('input,select').val('');
+       alert('Bạn đã gửi đơn hàng thành công. Chúng tôi sẽ liên hệ lại với ban!');
+    });
+	$('.anhmap').click(function(event) {
+  $('.diachicuahang').toggle();
+});
+$('.dongcuaso').click(function(event) {
+ $('.diachicuahang').hide();
+});
+	
+</script>
 	      <div id='fb-root'></div>
       <script async='async' defer='defer'>
         window.fbAsyncInit = function() {
