@@ -10184,13 +10184,25 @@ span.dongcuaso {
     line-height: 18px;
     cursor: pointer;
 }	
-	
-	
+.ontopne {
+    z-index: 9997;
+    position: fixed;
+    border-radius: 50px;
+    bottom: 19%;
+    right: 4%;
+    cursor: pointer;
+    display: none;
+}	
+.ontopne img {
+    width: 40px;
+}	
    @media(max-width:576px){
     .mapicon {
     bottom: 17%;
 }	
-	   
+	.ontopne {
+    right: 8%;
+}   
 	   
     .call-now-button {
     right: 18%;bottom:4%;
@@ -11084,7 +11096,18 @@ span.dongcuaso {
 $('.dongcuaso').click(function(event) {
  $('.diachicuahang').hide();
 });
-	
+	 $(window).scroll(function(event) {
+    var vitribody = $('body,html').scrollTop();
+    if(vitribody >= 250){
+      $('.ontopne').show();
+    }else{
+    $('.ontopne').hide();
+    }
+  });
+ $('.ontopne').click(function(event) {
+   $('body,html').animate({scrollTop:0},400)
+  });
+
 </script>
 	      <div id='fb-root'></div>
       <script async='async' defer='defer'>
